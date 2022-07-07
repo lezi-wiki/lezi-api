@@ -1,13 +1,14 @@
 package main
 
 import (
-	"LeziAPI/Router"
-	"fmt"
+	"LeziAPI/routers"
 )
 
 func main() {
-	InitRouter := Router.InitRouter()
-	if InitRouter == 1 {
-		fmt.Println("Router Error!")
+	r := routers.InitRouter()
+
+	err := r.Run(":8080")
+	if err != nil {
+		return
 	}
 }

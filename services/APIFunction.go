@@ -1,15 +1,15 @@
-package Services
+package services
 
 import (
-	"LeziAPI/JsonPkg"
+	"LeziAPI/pkg/json"
 	"github.com/gin-gonic/gin"
 )
 
-var InitJSON = JsonPkg.InitJSON()
+var InitJSON = json.InitJSON()
 
 func ApiJSON(c *gin.Context) {
 	newRand := Random(InitJSON)
-	GetTxt, GetAuthor := JsonPkg.GetTxt(newRand)
+	GetTxt, GetAuthor := json.GetTxt(newRand)
 	c.JSON(200, gin.H{
 		"from":   "LeziAPI",
 		"txt":    GetTxt,
@@ -18,6 +18,6 @@ func ApiJSON(c *gin.Context) {
 }
 func ApiTxt(c *gin.Context) {
 	newRand := Random(InitJSON)
-	GetTxt, _ := JsonPkg.GetTxt(newRand)
+	GetTxt, _ := json.GetTxt(newRand)
 	c.String(200, GetTxt)
 }

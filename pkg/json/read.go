@@ -1,4 +1,4 @@
-package JsonPkg
+package json
 
 import (
 	"bufio"
