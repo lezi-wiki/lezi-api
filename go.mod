@@ -1,4 +1,4 @@
-module LeziAPI
+module github.com/lezi-wiki/lezi-api
 
 go 1.18
 

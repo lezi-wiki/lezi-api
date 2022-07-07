@@ -1,7 +1,7 @@
 package main
 
 import (
-	"LeziAPI/routers"
+	"github.com/lezi-wiki/lezi-api/routers"
 )
 
 func main() {

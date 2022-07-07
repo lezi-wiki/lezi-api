@@ -1,8 +1,8 @@
 package routers
 
 import (
-	"LeziAPI/Services"
 	"github.com/gin-gonic/gin"
+	"github.com/lezi-wiki/lezi-api/services"
 )
 
 func InitRouter() *gin.Engine {

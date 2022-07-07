@@ -1,8 +1,8 @@
 package services
 
 import (
-	"LeziAPI/pkg/json"
 	"github.com/gin-gonic/gin"
+	"github.com/lezi-wiki/lezi-api/pkg/json"
 )
 
 var InitJSON = json.InitJSON()
