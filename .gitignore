@@ -1,3 +1,7 @@
+### App
+conf.ini
+/statics/
+
 ### VisualStudioCode template
 .vscode/*
 !.vscode/settings.json
