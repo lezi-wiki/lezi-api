@@ -9,8 +9,8 @@ func RandomInit() {
 	rand.Seed(time.Now().UnixNano())
 }
 
-func Random() int {
+func Random(max int) int {
 	RandomInit()
-	randre := rand.Intn(100) //TODO Read database id then set random max
-	return randre
+	randre := rand.Intn(max - 1)
+	return randre + 1
 }

@@ -1,17 +1,23 @@
 package Services
 
-import "github.com/gin-gonic/gin"
+import (
+	"LeziAPI/JsonPkg"
+	"github.com/gin-gonic/gin"
+)
 
-func ApiTxt(c *gin.Context) {
+var InitJSON = JsonPkg.InitJSON()
+
+func ApiJSON(c *gin.Context) {
+	newRand := Random(InitJSON)
+	GetTxt, GetAuthor := JsonPkg.GetTxt(newRand)
 	c.JSON(200, gin.H{
-		"from": "LeziAPI",
-		"txt":  Random(),
-	}) //TODO:Read database and return an real text from Lezi
+		"from":   "LeziAPI",
+		"txt":    GetTxt,
+		"author": GetAuthor,
+	})
 }
-func ApiImg(c *gin.Context) {
-	c.JSON(200, gin.H{
-		"from": "LeziAPI",
-		"img":  "qssb.png",
-		"url":  "https://www.baidu.com/qssb.png",
-	}) //TODO:Read database and return an real image url
+func ApiTxt(c *gin.Context) {
+	newRand := Random(InitJSON)
+	GetTxt, _ := JsonPkg.GetTxt(newRand)
+	c.String(200, GetTxt)
 }
