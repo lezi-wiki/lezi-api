@@ -6,6 +6,7 @@ import (
 	"github.com/lezi-wiki/lezi-api/model"
 	"github.com/lezi-wiki/lezi-api/pkg/response"
 	"github.com/lezi-wiki/lezi-api/services"
+	"math/rand"
 )
 
 func GlobalHandler(c *gin.Context) {
@@ -36,5 +37,7 @@ func GlobalHandler(c *gin.Context) {
 		}
 	}
 
-	response.JsonData(c, newArr)
+	text := newArr[rand.Intn(len(newArr))]
+
+	response.JsonData(c, text)
 }
