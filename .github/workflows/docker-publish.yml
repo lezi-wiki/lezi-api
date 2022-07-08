@@ -9,9 +9,10 @@ on:
   push:
     branches: [ "master" ]
     # Publish semver tags as releases.
-    tags: [ '*' ]
   pull_request:
     branches: [ "master" ]
+  release:
+    types: [ published ]
 
 env:
   # Use docker.io for Docker Hub if empty
