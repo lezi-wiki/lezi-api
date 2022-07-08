@@ -37,7 +37,6 @@ func GlobalHandler(c *gin.Context) {
 		}
 	}
 
-	text := newArr[rand.Intn(len(newArr))]
-
-	response.JsonData(c, text)
+	data := newArr[rand.Intn(len(newArr))]
+	response.JsonData(c, data)
 }

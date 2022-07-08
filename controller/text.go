@@ -22,5 +22,4 @@ func TextHandler(c *gin.Context) {
 	data := arr[index]
 
 	response.Data(c, data.Text)
-	c.Done()
 }
