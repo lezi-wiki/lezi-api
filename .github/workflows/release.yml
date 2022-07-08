@@ -55,7 +55,7 @@ jobs:
           name: random_donate_linux_arm64
           path: build/random_donate_linux_arm64
 
-      - name: Build (linux arm64)
+      - name: Build (linux arm)
         run: go build -a -o build/random_donate_linux_arm .
         env:
           GOOS: linux
@@ -68,7 +68,7 @@ jobs:
           name: random_donate_linux_arm
           path: build/random_donate_linux_arm
 
-      - name: Build (linux arm64)
+      - name: Build (windows amd64)
         run: go build -a -o build/random_donate_windows_amd64.exe .
         env:
           GOOS: windows
