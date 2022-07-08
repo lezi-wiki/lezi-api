@@ -1,14 +1,14 @@
 FROM golang:alpine AS Builder
-WORKDIR /app/lezi-api
+WORKDIR /app/lezi-api/
 
 COPY . .
 RUN go mod tidy
 RUN go build -o leziapi .
 
 FROM alpine AS Runner
-WORKDIR /app/lezi-api
+WORKDIR /app/lezi-api/
 
-COPY --from=Builder leziapi .
+COPY --from=Builder /app/lezi-api/leziapi leziapi
 
 RUN chmod +x leziapi
 CMD ./leziapi
