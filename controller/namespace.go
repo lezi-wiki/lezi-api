@@ -8,7 +8,23 @@ import (
 	"time"
 )
 
-func TextHandler(c *gin.Context) {
+func NamespaceJsonHandler(c *gin.Context) {
+	ns := c.Param("namespace")
+
+	arr, err := services.GetTextByNamespace(ns)
+	if err != nil {
+		response.NotFoundError(c)
+		return
+	}
+
+	rand.Seed(time.Now().Unix())
+	index := rand.Intn(len(arr))
+	data := arr[index]
+
+	response.JsonData(c, data)
+}
+
+func NamespaceTextHandler(c *gin.Context) {
 	ns := c.Param("namespace")
 
 	arr, err := services.GetTextByNamespace(ns)

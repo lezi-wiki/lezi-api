@@ -32,11 +32,23 @@ func InitRouter() *gin.Engine {
 		v1.GET("global", controller.GlobalHandler)
 		v1.POST("global", controller.GlobalHandler)
 
-		v1.GET(":namespace/text", controller.TextHandler)
-		v1.POST(":namespace/text", controller.TextHandler)
+		namespace := v1.Group(":namespace")
+		{
+			namespace.GET("text", controller.NamespaceTextHandler)
+			namespace.POST("text", controller.NamespaceTextHandler)
 
-		v1.GET(":namespace/json", controller.JsonHandler)
-		v1.POST(":namespace/json", controller.JsonHandler)
+			namespace.GET("json", controller.NamespaceJsonHandler)
+			namespace.POST("json", controller.NamespaceJsonHandler)
+		}
+
+		speaker := v1.Group("speaker/:speaker")
+		{
+			speaker.GET("text", controller.SpeakerTextHandler)
+			speaker.POST("text", controller.SpeakerTextHandler)
+
+			speaker.GET("json", controller.SpeakerJsonHandler)
+			speaker.POST("json", controller.SpeakerJsonHandler)
+		}
 	}
 
 	return r

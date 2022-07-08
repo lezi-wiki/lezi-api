@@ -20,3 +20,18 @@ func GetTextByNamespace(ns string) ([]model.TextData, error) {
 
 	return arr, nil
 }
+
+func GetTextBySpeaker(speaker string) ([]model.TextData, error) {
+	var arr []model.TextData
+	for _, v := range bootstrap.TextData {
+		if v.Speaker == speaker {
+			arr = append(arr, v)
+		}
+	}
+
+	if len(arr) == 0 {
+		return nil, errors.New("no enough data")
+	}
+
+	return arr, nil
+}
