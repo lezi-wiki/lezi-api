@@ -35,8 +35,10 @@ func main() {
 
 	r := routers.InitRouter()
 
+	util.Log().Info("应用将监听 %s", conf.SystemConfig.Listen)
 	err := r.Run(conf.SystemConfig.Listen)
 	if err != nil {
+		util.Log().Panic("尝试监听 %s 时发生错误，%s", conf.SystemConfig.Listen, err.Error())
 		return
 	}
 }
