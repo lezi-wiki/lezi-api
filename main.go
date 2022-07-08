@@ -12,15 +12,19 @@ import (
 //go:embed data.json
 var data string
 
-var isEject bool
-var confPath string
+var (
+	isEject  bool
+	confPath string
+	dataPath string
+)
 
 func init() {
 	flag.StringVar(&confPath, "c", util.RelativePath("conf.ini"), "配置文件路径")
+	flag.StringVar(&dataPath, "d", util.RelativePath("data.json"), "数据文件路径")
 	flag.BoolVar(&isEject, "eject", false, "导出内置静态资源")
 	flag.Parse()
 
-	bootstrap.Init(data, confPath)
+	bootstrap.Init(dataPath, data, confPath)
 }
 
 func main() {

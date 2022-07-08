@@ -2,9 +2,9 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/lezi-wiki/lezi-api/bootstrap"
 	"github.com/lezi-wiki/lezi-api/model"
 	"github.com/lezi-wiki/lezi-api/pkg/response"
+	"github.com/lezi-wiki/lezi-api/pkg/text"
 	"github.com/lezi-wiki/lezi-api/services"
 	"math/rand"
 )
@@ -15,7 +15,7 @@ func GlobalHandler(c *gin.Context) {
 	ns := c.Query("ns")
 	speaker := c.Query("speaker")
 
-	var arr = bootstrap.TextData
+	var arr = text.Data
 
 	if ns != "" {
 		arr, err = services.GetTextByNamespace(ns)

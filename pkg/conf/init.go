@@ -27,8 +27,10 @@ func Init(path string) {
 		}
 
 		f.Close()
+		util.Log().Info("配置文件初始化完成，文件位于 %s", path)
 	}
 
+	util.Log().Info("将从 %s 解析配置文件", path)
 	cfg, err = ini.Load(path)
 	if err != nil {
 		util.Log().Panic("无法解析配置文件 '%s': %s", path, err)
