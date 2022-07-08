@@ -29,8 +29,10 @@ jobs:
           sudo apt-get -y install gcc-arm-linux-gnueabihf libc6-dev-armhf-cross
           sudo apt-get -y install gcc-aarch64-linux-gnu libc6-dev-arm64-cross
 
+      # Linux Amd64
+
       - name: Build (linux amd64)
-        run: go build -a -o build/random_donate_linux_amd64 .
+        run: go build -a -o build/leziapi_linux_amd64 .
         env:
           GOOS: linux
           GOARCH: amd64
@@ -39,11 +41,13 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: random_donate_linux_amd64
-          path: build/random_donate_linux_amd64
+          name: leziapi_linux_amd64
+          path: build/leziapi_linux_amd64
+
+      # Linux Arm64
 
       - name: Build (linux arm64)
-        run: go build -a -o build/random_donate_linux_arm64 .
+        run: go build -a -o build/leziapi_linux_arm64 .
         env:
           GOOS: linux
           GOARCH: arm64
@@ -52,11 +56,13 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: random_donate_linux_arm64
-          path: build/random_donate_linux_arm64
+          name: leziapi_linux_arm64
+          path: build/leziapi_linux_arm64
+
+      # Linux Arm
 
       - name: Build (linux arm)
-        run: go build -a -o build/random_donate_linux_arm .
+        run: go build -a -o build/leziapi_linux_arm .
         env:
           GOOS: linux
           GOARCH: arm
@@ -65,11 +71,13 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: random_donate_linux_arm
-          path: build/random_donate_linux_arm
+          name: leziapi_linux_arm
+          path: build/leziapi_linux_arm
+
+      # Windows x86_64
 
       - name: Build (windows amd64)
-        run: go build -a -o build/random_donate_windows_amd64.exe .
+        run: go build -a -o build/leziapi_windows_amd64.exe .
         env:
           GOOS: windows
           GOARCH: amd64
@@ -78,5 +86,5 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: random_donate_windows_amd64
-          path: build/random_donate_windows_amd64.exe
+          name: leziapi_windows_amd64
+          path: build/leziapi_windows_amd64.exe
