@@ -5,7 +5,7 @@ import (
 	"github.com/lezi-wiki/lezi-api/model"
 	"github.com/lezi-wiki/lezi-api/pkg/response"
 	"github.com/lezi-wiki/lezi-api/pkg/text"
-	text2 "github.com/lezi-wiki/lezi-api/services/text"
+	textService "github.com/lezi-wiki/lezi-api/services/text"
 	"math/rand"
 )
 
@@ -18,7 +18,7 @@ func GlobalHandler(c *gin.Context) {
 	var arr = text.Data
 
 	if ns != "" {
-		arr, err = text2.GetTextByNamespace(ns)
+		arr, err = textService.GetTextByNamespace(ns)
 		if err != nil {
 			response.NotFoundError(c)
 			return
