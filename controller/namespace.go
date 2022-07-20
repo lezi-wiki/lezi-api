@@ -3,7 +3,7 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/lezi-wiki/lezi-api/pkg/response"
-	"github.com/lezi-wiki/lezi-api/services"
+	"github.com/lezi-wiki/lezi-api/services/text"
 	"math/rand"
 	"time"
 )
@@ -11,7 +11,7 @@ import (
 func NamespaceJsonHandler(c *gin.Context) {
 	ns := c.Param("namespace")
 
-	arr, err := services.GetTextByNamespace(ns)
+	arr, err := text.GetTextByNamespace(ns)
 	if err != nil {
 		response.NotFoundError(c)
 		return
@@ -27,7 +27,7 @@ func NamespaceJsonHandler(c *gin.Context) {
 func NamespaceTextHandler(c *gin.Context) {
 	ns := c.Param("namespace")
 
-	arr, err := services.GetTextByNamespace(ns)
+	arr, err := text.GetTextByNamespace(ns)
 	if err != nil {
 		response.NotFoundError(c)
 		return

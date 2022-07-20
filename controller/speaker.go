@@ -3,7 +3,7 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/lezi-wiki/lezi-api/pkg/response"
-	"github.com/lezi-wiki/lezi-api/services"
+	"github.com/lezi-wiki/lezi-api/services/text"
 	"math/rand"
 	"time"
 )
@@ -11,7 +11,7 @@ import (
 func SpeakerJsonHandler(c *gin.Context) {
 	speaker := c.Param("speaker")
 
-	arr, err := services.GetTextBySpeaker(speaker)
+	arr, err := text.GetTextBySpeaker(speaker)
 	if err != nil {
 		response.NotFoundError(c)
 		return
@@ -27,7 +27,7 @@ func SpeakerJsonHandler(c *gin.Context) {
 func SpeakerTextHandler(c *gin.Context) {
 	speaker := c.Param("speaker")
 
-	arr, err := services.GetTextBySpeaker(speaker)
+	arr, err := text.GetTextBySpeaker(speaker)
 	if err != nil {
 		response.NotFoundError(c)
 		return
