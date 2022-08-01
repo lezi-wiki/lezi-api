@@ -43,6 +43,7 @@ jobs:
         with:
           name: leziapi_linux_amd64
           path: build/leziapi_linux_amd64
+          retention-days: 7
 
       # Linux Arm64
 
@@ -58,6 +59,7 @@ jobs:
         with:
           name: leziapi_linux_arm64
           path: build/leziapi_linux_arm64
+          retention-days: 7
 
       # Linux Arm
 
@@ -73,6 +75,7 @@ jobs:
         with:
           name: leziapi_linux_arm
           path: build/leziapi_linux_arm
+          retention-days: 7
 
       # Windows x86_64
 
@@ -88,3 +91,4 @@ jobs:
         with:
           name: leziapi_windows_amd64
           path: build/leziapi_windows_amd64.exe
+          retention-days: 7
