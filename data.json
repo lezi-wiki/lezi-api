@@ -393,5 +393,10 @@
     "ns": "Thermal",
     "speaker": "Thermal code",
     "text": "Mom, we don't welcome you without anything.（注：这条是在骂@wuz）"
+  },
+    {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "腾讯云服务器，你不装宝塔面板还能怎么玩"
   }
 ]
