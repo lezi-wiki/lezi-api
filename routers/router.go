@@ -25,6 +25,10 @@ func InitRouter() *gin.Engine {
 		})
 	})
 
+	r.GET("/", func(c *gin.Context) {
+		c.Redirect(http.StatusMovedPermanently, "https://github.com/lezi-wiki/lezi-api/wiki")
+	})
+
 	// api v1
 	v1 := r.Group("/api/v1")
 
