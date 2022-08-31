@@ -14,6 +14,7 @@ func GlobalHandler(c *gin.Context) {
 
 	ns := c.Query("ns")
 	speaker := c.Query("speaker")
+	format := c.Query("format")
 
 	var arr = text.Data
 
@@ -38,5 +39,12 @@ func GlobalHandler(c *gin.Context) {
 	}
 
 	data := newArr[rand.Intn(len(newArr))]
-	response.JsonData(c, data)
+	switch format {
+	case "json":
+		response.JsonData(c, data)
+	case "xml":
+		response.XmlData(c, data)
+	default:
+		response.Data(c, data.Text)
+	}
 }

@@ -1,7 +1,7 @@
 package model
 
 type TextData struct {
-	Namespace string `json:"ns"`
-	Speaker   string `json:"speaker"`
-	Text      string `json:"text"`
+	Namespace string `json:"ns" xml:"namespace"`
+	Speaker   string `json:"speaker" xml:"speaker"`
+	Text      string `json:"text" xml:"text"`
 }

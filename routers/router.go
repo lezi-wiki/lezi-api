@@ -39,6 +39,9 @@ func InitRouter() *gin.Engine {
 
 			namespace.GET("json", controller.NamespaceJsonHandler)
 			namespace.POST("json", controller.NamespaceJsonHandler)
+
+			namespace.GET("xml", controller.NamespaceXmlHandler)
+			namespace.POST("xml", controller.NamespaceXmlHandler)
 		}
 
 		speaker := v1.Group("speaker/:speaker")
@@ -48,6 +51,9 @@ func InitRouter() *gin.Engine {
 
 			speaker.GET("json", controller.SpeakerJsonHandler)
 			speaker.POST("json", controller.SpeakerJsonHandler)
+
+			speaker.GET("xml", controller.SpeakerXmlHandler)
+			speaker.POST("xml", controller.SpeakerXmlHandler)
 		}
 	}
 
