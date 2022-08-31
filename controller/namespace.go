@@ -39,3 +39,19 @@ func NamespaceTextHandler(c *gin.Context) {
 
 	response.Data(c, data.Text)
 }
+
+func NamespaceXmlHandler(c *gin.Context) {
+	ns := c.Param("namespace")
+
+	arr, err := text.GetTextByNamespace(ns)
+	if err != nil {
+		response.NotFoundError(c)
+		return
+	}
+
+	rand.Seed(time.Now().Unix())
+	index := rand.Intn(len(arr))
+	data := arr[index]
+
+	response.XmlData(c, data)
+}

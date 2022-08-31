@@ -24,6 +24,22 @@ func SpeakerJsonHandler(c *gin.Context) {
 	response.JsonData(c, data)
 }
 
+func SpeakerXmlHandler(c *gin.Context) {
+	speaker := c.Param("speaker")
+
+	arr, err := text.GetTextBySpeaker(speaker)
+	if err != nil {
+		response.NotFoundError(c)
+		return
+	}
+
+	rand.Seed(time.Now().Unix())
+	index := rand.Intn(len(arr))
+	data := arr[index]
+
+	response.XmlData(c, data)
+}
+
 func SpeakerTextHandler(c *gin.Context) {
 	speaker := c.Param("speaker")
 
