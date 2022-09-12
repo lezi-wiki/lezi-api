@@ -1,4 +1,4 @@
-package cron
+package jobs
 
 import (
 	"github.com/lezi-wiki/lezi-api/pkg/log"
@@ -6,7 +6,7 @@ import (
 	"github.com/lezi-wiki/lezi-api/services/remote"
 )
 
-func getNewData() {
+func UpdateData() {
 	log.Log().Infof("准备从 GitHub 更新数据集")
 	data, err := remote.GetDataFromGitHub()
 	if err != nil {
