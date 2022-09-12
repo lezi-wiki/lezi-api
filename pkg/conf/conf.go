@@ -21,7 +21,7 @@ type datasource struct {
 	Password string
 	File     string
 	Prefix   string
-	SSL      bool
+	SSLMode  string
 }
 
 type redis struct {
