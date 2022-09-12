@@ -3,13 +3,15 @@ package bootstrap
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/lezi-wiki/lezi-api/pkg/conf"
+	"github.com/lezi-wiki/lezi-api/pkg/log"
 	"github.com/lezi-wiki/lezi-api/pkg/text"
-	"github.com/lezi-wiki/lezi-api/pkg/util"
 	"github.com/lezi-wiki/lezi-api/services/remote"
 )
 
 func Init(dataPath string, data string, confPath string, updateEndpoint string) {
-	util.Log()
+	printName()
+
+	log.Log()
 
 	// 初始化配置文件
 	conf.Init(confPath)

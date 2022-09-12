@@ -1,6 +1,7 @@
 package util
 
 import (
+	"github.com/lezi-wiki/lezi-api/pkg/log"
 	"io"
 	"os"
 	"path/filepath"
@@ -22,7 +23,7 @@ func CreatNestedFile(path string) (*os.File, error) {
 	if !Exists(basePath) {
 		err := os.MkdirAll(basePath, 0700)
 		if err != nil {
-			Log().Warning("无法创建目录，%s", err)
+			log.Log().Warningf("无法创建目录，%s", err)
 			return nil, err
 		}
 	}

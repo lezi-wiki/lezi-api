@@ -6,6 +6,7 @@ import (
 	"github.com/lezi-wiki/lezi-api/bootstrap"
 	"github.com/lezi-wiki/lezi-api/pkg/conf"
 	"github.com/lezi-wiki/lezi-api/pkg/cron"
+	"github.com/lezi-wiki/lezi-api/pkg/log"
 	"github.com/lezi-wiki/lezi-api/pkg/util"
 	"github.com/lezi-wiki/lezi-api/routers"
 )
@@ -39,15 +40,15 @@ func main() {
 	if updateEndpoint != "false" {
 		cron.InitJobs()
 	} else {
-		util.Log().Warning("自动更新服务未启动，数据将无法从 GitHub 自动获取！")
+		log.Log().Warning("自动更新服务未启动，数据将无法从 GitHub 自动获取！")
 	}
 
 	r := routers.InitRouter()
 
-	util.Log().Info("应用将监听 %s", conf.SystemConfig.Listen)
+	log.Log().Infof("应用将监听 %s", conf.SystemConfig.Listen)
 	err := r.Run(conf.SystemConfig.Listen)
 	if err != nil {
-		util.Log().Panic("尝试监听 %s 时发生错误，%s", conf.SystemConfig.Listen, err.Error())
+		log.Log().Panicf("尝试监听 %s 时发生错误，%s", conf.SystemConfig.Listen, err.Error())
 		return
 	}
 }
