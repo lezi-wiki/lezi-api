@@ -22,7 +22,7 @@ func RandStringRunes(n int) string {
 }
 
 func RandomInt(min, max int) int {
-	if min >= max || min == 0 || max == 0 {
+	if min >= max {
 		return max
 	}
 	return min + rand.Intn(max-min)
