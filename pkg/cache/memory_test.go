@@ -130,7 +130,7 @@ func TestMemoStore_Delete(t *testing.T) {
 	}, "test_")
 	asserts.NoError(err)
 
-	err = store.Delete([]string{"1", "2"}, "test_")
+	err = store.Deletes([]string{"1", "2"}, "test_")
 	asserts.NoError(err)
 	values, miss := store.Gets([]string{"1", "2", "3", "4"}, "test_")
 	asserts.Equal([]string{"1", "2"}, miss)
