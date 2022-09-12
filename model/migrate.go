@@ -7,7 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
-func needMigrate() bool {
+func needMigrate(db *gorm.DB) bool {
 	var s Setting
 	err := db.Model(&Setting{}).Where(&Setting{
 		Name: "version",
@@ -20,8 +20,8 @@ func needMigrate() bool {
 	return s.Val != conf.Version
 }
 
-func migrate() {
-	if !needMigrate() {
+func migrate(db *gorm.DB) {
+	if !needMigrate(db) {
 		log.Log().Info("跳过数据库迁移阶段")
 		return
 	}
@@ -33,12 +33,12 @@ func migrate() {
 		log.Log().Panicf("无法迁移数据库: %s", err)
 	}
 
-	addDefaultSettings()
+	addDefaultSettings(db)
 
 	log.Log().Info("数据库迁移完成")
 }
 
-func addDefaultSettings() {
+func addDefaultSettings(db *gorm.DB) {
 	for _, value := range defaultSettings {
 		err := db.Where(&Setting{
 			Name: value.Name,

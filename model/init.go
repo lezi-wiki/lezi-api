@@ -17,8 +17,6 @@ import (
 	"gorm.io/gorm/schema"
 )
 
-var db *gorm.DB
-
 func NewDatabase() (*gorm.DB, error) {
 	var dialect gorm.Dialector
 
@@ -87,8 +85,7 @@ func NewDatabase() (*gorm.DB, error) {
 }
 
 func Init() {
-	var err error
-	db, err = NewDatabase()
+	db, err := NewDatabase()
 
 	if err != nil {
 		log.Log().Panicf("数据库连接失败: %s", err)
@@ -104,5 +101,7 @@ func Init() {
 	sqlDB.SetMaxOpenConns(100)
 
 	// 自动迁移
-	migrate()
+	migrate(db)
+
+	Client = NewDataClient(db)
 }
