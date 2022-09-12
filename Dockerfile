@@ -4,7 +4,7 @@ WORKDIR /app/lezi-api/
 RUN apk add build-base
 
 COPY . .
-RUN go mod tidy
+RUN go mod download
 RUN go build -o leziapi .
 
 FROM alpine AS Runner
