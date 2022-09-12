@@ -4,4 +4,4 @@ import (
 	"github.com/lezi-wiki/lezi-api/model"
 )
 
-var Data []model.TextData
+var Data []model.Text

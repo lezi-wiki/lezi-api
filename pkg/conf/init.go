@@ -39,7 +39,8 @@ func Init(path string) {
 	}
 
 	sections := map[string]interface{}{
-		"System": SystemConfig,
+		"System":     SystemConfig,
+		"DataSource": DataSourceConfig,
 	}
 	for sectionName, sectionStruct := range sections {
 		err = mapSection(sectionName, sectionStruct)

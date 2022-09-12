@@ -29,7 +29,7 @@ func GlobalHandler(c *gin.Context) {
 	var newArr = arr
 
 	if speaker != "" {
-		newArr = []model.TextData{}
+		newArr = []model.Text{}
 
 		for _, d := range arr {
 			if d.Speaker == speaker {

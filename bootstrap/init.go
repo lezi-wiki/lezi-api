@@ -2,6 +2,7 @@ package bootstrap
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/lezi-wiki/lezi-api/model"
 	"github.com/lezi-wiki/lezi-api/pkg/conf"
 	"github.com/lezi-wiki/lezi-api/pkg/cron/jobs"
 	"github.com/lezi-wiki/lezi-api/pkg/log"
@@ -15,6 +16,9 @@ func Init(confPath string, updateEndpoint string) {
 
 	// 初始化配置文件
 	conf.Init(confPath)
+
+	// 初始化数据库
+	model.Init()
 
 	// 设置更新
 	remote.Endpoint = updateEndpoint

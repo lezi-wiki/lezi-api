@@ -6,8 +6,8 @@ import (
 	"github.com/lezi-wiki/lezi-api/pkg/text"
 )
 
-func GetTextByNamespace(ns string) ([]model.TextData, error) {
-	var arr []model.TextData
+func GetTextByNamespace(ns string) ([]model.Text, error) {
+	var arr []model.Text
 	for _, v := range text.Data {
 		if v.Namespace == ns {
 			arr = append(arr, v)
@@ -21,8 +21,8 @@ func GetTextByNamespace(ns string) ([]model.TextData, error) {
 	return arr, nil
 }
 
-func GetTextBySpeaker(speaker string) ([]model.TextData, error) {
-	var arr []model.TextData
+func GetTextBySpeaker(speaker string) ([]model.Text, error) {
+	var arr []model.Text
 	for _, v := range text.Data {
 		if v.Speaker == speaker {
 			arr = append(arr, v)
