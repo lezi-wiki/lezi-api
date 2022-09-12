@@ -1,7 +1,7 @@
 FROM golang:alpine AS Builder
 WORKDIR /app/lezi-api/
 
-RUN apk add builtin
+RUN apk add build-base
 
 COPY . .
 RUN go mod tidy
