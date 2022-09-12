@@ -22,3 +22,10 @@ type datasource struct {
 	File     string
 	Prefix   string
 }
+
+type redis struct {
+	Network  string
+	Server   string
+	Password string
+	DB       int
+}

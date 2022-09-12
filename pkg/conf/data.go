@@ -15,3 +15,10 @@ var DataSourceConfig = &datasource{
 	File:     "leziapi.db",
 	Prefix:   "lezi_",
 }
+
+var RedisConfig = &redis{
+	Network:  "tcp",
+	Server:   "",
+	Password: "",
+	DB:       0,
+}

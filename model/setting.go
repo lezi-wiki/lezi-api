@@ -2,6 +2,8 @@ package model
 
 import (
 	"encoding/gob"
+	"github.com/lezi-wiki/lezi-api/pkg/cache"
+
 	"gorm.io/gorm"
 )
 
@@ -23,7 +25,7 @@ func init() {
 }
 
 type SettingService interface {
-	Get(name string, settingType SettingType) (Setting, error)
+	Get(name string, settingType SettingType) (string, error)
 	Set(name string, settingType SettingType, val string) error
 	Delete(name string, settingType SettingType) error
 	List() ([]Setting, error)
@@ -38,29 +40,46 @@ func NewSettingService(db *gorm.DB) SettingService {
 	return &SettingServiceImpl{db: db}
 }
 
-func (s *SettingServiceImpl) Get(name string, settingType SettingType) (Setting, error) {
+func (s *SettingServiceImpl) Get(name string, settingType SettingType) (string, error) {
 	var setting Setting
+
+	if value, ok := cache.Get("setting_" + name); ok {
+		return value.(string), nil
+	}
+
 	err := s.db.Model(&Setting{}).Where(&Setting{
 		Name: name,
 		Type: settingType,
 	}).First(&setting).Error
-	return setting, err
+	return setting.Val, err
 }
 
 func (s *SettingServiceImpl) Set(name string, settingType SettingType, val string) error {
-	return s.db.Model(&Setting{}).Where(&Setting{
+	err := s.db.Model(&Setting{}).Where(&Setting{
 		Name: name,
 		Type: settingType,
 	}).Updates(&Setting{
 		Val: val,
 	}).Error
+	if err != nil {
+		return err
+	}
+
+	cache.Set("setting_"+name, val, 0)
+	return nil
 }
 
 func (s *SettingServiceImpl) Delete(name string, settingType SettingType) error {
-	return s.db.Model(&Setting{}).Where(&Setting{
+	err := s.db.Model(&Setting{}).Where(&Setting{
 		Name: name,
 		Type: settingType,
 	}).Delete(&Setting{}).Error
+	if err != nil {
+		return err
+	}
+
+	cache.Deletes([]string{name}, "setting_")
+	return nil
 }
 
 func (s *SettingServiceImpl) List() ([]Setting, error) {

@@ -2,6 +2,7 @@ package model
 
 import (
 	"errors"
+
 	"github.com/lezi-wiki/lezi-api/pkg/conf"
 	"github.com/lezi-wiki/lezi-api/pkg/log"
 	"gorm.io/gorm"
