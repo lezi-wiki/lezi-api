@@ -5,7 +5,7 @@ import (
 	"errors"
 	"github.com/lezi-wiki/lezi-api/model"
 	"github.com/lezi-wiki/lezi-api/pkg/http"
-	"github.com/lezi-wiki/lezi-api/pkg/util"
+	"github.com/lezi-wiki/lezi-api/pkg/log"
 )
 
 var Endpoint string
@@ -17,20 +17,20 @@ const (
 func GetDataFromGitHub() ([]model.TextData, error) {
 	raw, err := http.Get(Endpoint)
 	if err != nil {
-		util.Log().Error("Error when get data from GitHub, %s", err.Error())
+		log.Log().Errorf("Error when get data from GitHub, %s", err.Error())
 		return nil, err
 	}
 
 	isValid := json.Valid(raw)
 	if !isValid {
-		util.Log().Error("Error when get data from GitHub, %s", ErrNotValid)
+		log.Log().Errorf("Error when get data from GitHub, %s", ErrNotValid)
 		return nil, errors.New(ErrNotValid)
 	}
 
 	var data []model.TextData
 	err = json.Unmarshal(raw, &data)
 	if err != nil {
-		util.Log().Error("Error when get data from GitHub, %s", err.Error())
+		log.Log().Errorf("Error when get data from GitHub, %s", err.Error())
 		return nil, err
 	}
 

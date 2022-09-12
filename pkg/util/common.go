@@ -1,14 +1,11 @@
 package util
 
-import "math/rand"
+import "strings"
 
-func RandomInt(min, max int) int {
-	if min >= max || min == 0 || max == 0 {
-		return max
+func Replace(raw string, index map[string]string) string {
+	for key, value := range index {
+		raw = strings.ReplaceAll(raw, key, value)
 	}
-	return min + rand.Intn(max-min)
-}
 
-func RandomItemFromSlice[T any](slice []T) T {
-	return slice[RandomInt(0, len(slice)-1)]
+	return raw
 }
