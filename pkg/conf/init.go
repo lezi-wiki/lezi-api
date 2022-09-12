@@ -49,9 +49,9 @@ func Init(path string) {
 	}
 
 	// 重设log等级
-	if !SystemConfig.Debug {
+	if SystemConfig.Debug {
 		log.GlobalLogger = nil
-		log.Log().SetLevel(logrus.InfoLevel)
+		log.Log().SetLevel(logrus.DebugLevel)
 	}
 }
 
