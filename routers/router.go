@@ -4,8 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/lezi-wiki/lezi-api/controller"
 	"github.com/lezi-wiki/lezi-api/middleware"
-	"github.com/lezi-wiki/lezi-api/model"
-	"github.com/lezi-wiki/lezi-api/pkg/response"
+	"github.com/lezi-wiki/lezi-api/pkg/serializer"
 	"net/http"
 )
 
@@ -18,11 +17,7 @@ func InitRouter() *gin.Engine {
 
 	// Ping interface
 	r.GET("/ping", func(c *gin.Context) {
-		response.JsonData(c, &model.ApiData{
-			Code: http.StatusOK,
-			Msg:  http.StatusText(http.StatusOK),
-			Data: "pong",
-		})
+		c.JSON(http.StatusOK, serializer.NewResponse(http.StatusOK, "pong", nil))
 	})
 
 	r.GET("/", func(c *gin.Context) {

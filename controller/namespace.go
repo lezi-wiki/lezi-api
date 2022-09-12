@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/lezi-wiki/lezi-api/pkg/response"
+	"github.com/lezi-wiki/lezi-api/pkg/serializer"
 	"github.com/lezi-wiki/lezi-api/services/text"
 	"math/rand"
 	"time"
@@ -13,7 +13,7 @@ func NamespaceJsonHandler(c *gin.Context) {
 
 	arr, err := text.GetTextByNamespace(ns)
 	if err != nil {
-		response.NotFoundError(c)
+		c.JSON(404, serializer.NotFoundResponse())
 		return
 	}
 
@@ -21,7 +21,7 @@ func NamespaceJsonHandler(c *gin.Context) {
 	index := rand.Intn(len(arr))
 	data := arr[index]
 
-	response.JsonData(c, data)
+	c.JSON(200, serializer.NewSuccessResponse(data))
 }
 
 func NamespaceTextHandler(c *gin.Context) {
@@ -29,7 +29,7 @@ func NamespaceTextHandler(c *gin.Context) {
 
 	arr, err := text.GetTextByNamespace(ns)
 	if err != nil {
-		response.NotFoundError(c)
+		c.JSON(404, serializer.NotFoundResponse())
 		return
 	}
 
@@ -37,7 +37,7 @@ func NamespaceTextHandler(c *gin.Context) {
 	index := rand.Intn(len(arr))
 	data := arr[index]
 
-	response.Data(c, data.Text)
+	c.String(200, data.Text)
 }
 
 func NamespaceXmlHandler(c *gin.Context) {
@@ -45,7 +45,7 @@ func NamespaceXmlHandler(c *gin.Context) {
 
 	arr, err := text.GetTextByNamespace(ns)
 	if err != nil {
-		response.NotFoundError(c)
+		c.JSON(404, serializer.NotFoundResponse())
 		return
 	}
 
@@ -53,5 +53,5 @@ func NamespaceXmlHandler(c *gin.Context) {
 	index := rand.Intn(len(arr))
 	data := arr[index]
 
-	response.XmlData(c, data)
+	c.XML(200, serializer.NewSuccessResponse(data))
 }
