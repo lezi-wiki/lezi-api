@@ -35,12 +35,17 @@ func NewDatabase() (*gorm.DB, error) {
 				conf.DataSourceConfig.Database,
 			))
 		case "postgres", "postgresql":
-			dialect = postgres.Open(fmt.Sprintf("host=%s port=%d user=%s dbname=%s password=%s sslmode=disable TimeZone=%s",
+			ssl := "disable"
+			if conf.DataSourceConfig.SSL {
+				ssl = "enable"
+			}
+			dialect = postgres.Open(fmt.Sprintf("host=%s port=%d user=%s dbname=%s password=%s sslmode=%s TimeZone=%s",
 				conf.DataSourceConfig.Host,
 				conf.DataSourceConfig.Port,
 				conf.DataSourceConfig.Username,
 				conf.DataSourceConfig.Database,
 				conf.DataSourceConfig.Password,
+				ssl,
 				time.Local.String(),
 			))
 		case "mssql", "sqlserver":

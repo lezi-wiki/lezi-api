@@ -39,6 +39,7 @@ var DataSourceConfig = &datasource{
 	Password: env("DB_PASSWORD", "root"),
 	File:     env("DB_FILE", "leziapi.db"),
 	Prefix:   env("DB_PREFIX", "lezi_"),
+	SSL:      env("DB_SSL", "false") == "true",
 }
 
 var RedisConfig = &redis{
