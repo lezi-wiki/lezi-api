@@ -27,32 +27,23 @@ func InitRouter() *gin.Engine {
 	// api v1
 	v1 := r.Group("/api/v1")
 
+	methodsSupport := []string{"GET", "POST", "HEAD", "OPTIONS"}
+
 	{
-		v1.GET("global", controller.GlobalHandler)
-		v1.POST("global", controller.GlobalHandler)
+		Handles(v1, methodsSupport, "global", controller.GlobalHandler)
 
 		namespace := v1.Group(":namespace")
 		{
-			namespace.GET("text", controller.NamespaceTextHandler)
-			namespace.POST("text", controller.NamespaceTextHandler)
-
-			namespace.GET("json", controller.NamespaceJsonHandler)
-			namespace.POST("json", controller.NamespaceJsonHandler)
-
-			namespace.GET("xml", controller.NamespaceXmlHandler)
-			namespace.POST("xml", controller.NamespaceXmlHandler)
+			Handles(namespace, methodsSupport, "text", controller.NamespaceTextHandler)
+			Handles(namespace, methodsSupport, "json", controller.NamespaceJsonHandler)
+			Handles(namespace, methodsSupport, "xml", controller.NamespaceXmlHandler)
 		}
 
 		speaker := v1.Group("speaker/:speaker")
 		{
-			speaker.GET("text", controller.SpeakerTextHandler)
-			speaker.POST("text", controller.SpeakerTextHandler)
-
-			speaker.GET("json", controller.SpeakerJsonHandler)
-			speaker.POST("json", controller.SpeakerJsonHandler)
-
-			speaker.GET("xml", controller.SpeakerXmlHandler)
-			speaker.POST("xml", controller.SpeakerXmlHandler)
+			Handles(speaker, methodsSupport, "text", controller.SpeakerTextHandler)
+			Handles(speaker, methodsSupport, "json", controller.SpeakerJsonHandler)
+			Handles(speaker, methodsSupport, "xml", controller.SpeakerXmlHandler)
 		}
 	}
 

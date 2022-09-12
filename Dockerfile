@@ -1,6 +1,8 @@
 FROM golang:alpine AS Builder
 WORKDIR /app/lezi-api/
 
+RUN apk add build-base
+
 COPY . .
 RUN go mod tidy
 RUN go build -o leziapi .

@@ -14,7 +14,7 @@ const (
 	ErrNotValid = "json is not legal"
 )
 
-func GetDataFromGitHub() ([]model.TextData, error) {
+func GetDataFromGitHub() ([]model.Text, error) {
 	raw, err := http.Get(Endpoint)
 	if err != nil {
 		log.Log().Errorf("Error when get data from GitHub, %s", err.Error())
@@ -27,7 +27,7 @@ func GetDataFromGitHub() ([]model.TextData, error) {
 		return nil, errors.New(ErrNotValid)
 	}
 
-	var data []model.TextData
+	var data []model.Text
 	err = json.Unmarshal(raw, &data)
 	if err != nil {
 		log.Log().Errorf("Error when get data from GitHub, %s", err.Error())

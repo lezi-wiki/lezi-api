@@ -1,12 +1,12 @@
 package controller
 
 import (
+	"errors"
 	"github.com/gin-gonic/gin"
 	"github.com/lezi-wiki/lezi-api/model"
+	"github.com/lezi-wiki/lezi-api/pkg/log"
 	"github.com/lezi-wiki/lezi-api/pkg/serializer"
-	"github.com/lezi-wiki/lezi-api/pkg/text"
-	"github.com/lezi-wiki/lezi-api/pkg/util"
-	textService "github.com/lezi-wiki/lezi-api/services/text"
+	"gorm.io/gorm"
 )
 
 func GlobalHandler(c *gin.Context) {
@@ -16,37 +16,29 @@ func GlobalHandler(c *gin.Context) {
 	speaker := c.Query("speaker")
 	format := c.Query("format")
 
-	var arr = text.Data
-
-	if ns != "" {
-		arr, err = textService.GetTextByNamespace(ns)
-		if err != nil {
+	text, err := model.Client.Text.RandomRecord(model.Text{
+		Namespace: ns,
+		Speaker:   speaker,
+	})
+	if err != nil {
+		if errors.Is(err, gorm.ErrRecordNotFound) {
 			c.JSON(404, serializer.NotFoundResponse())
 			return
 		}
+
+		log.Log().Errorf("获取数据失败: %s", err)
+		c.JSON(500, serializer.NewErrorResponse(500, "database error"))
+		return
 	}
 
-	var newArr = arr
-
-	if speaker != "" {
-		newArr = []model.TextData{}
-
-		for _, d := range arr {
-			if d.Speaker == speaker {
-				newArr = append(newArr, d)
-			}
-		}
-	}
-
-	data := util.RandomItemFromSlice(newArr)
 	switch format {
 	case "json":
-		c.JSON(200, serializer.NewSuccessResponse(data))
+		c.JSON(200, serializer.NewSuccessResponse(text))
 	case "xml":
-		c.XML(200, serializer.NewSuccessResponse(data))
+		c.XML(200, serializer.NewSuccessResponse(text))
 	case "text":
-		c.String(200, data.Text)
+		c.String(200, text.Text)
 	default:
-		c.String(200, data.Text)
+		c.String(200, text.Text)
 	}
 }

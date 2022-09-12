@@ -39,7 +39,8 @@ func Init(path string) {
 	}
 
 	sections := map[string]interface{}{
-		"System": SystemConfig,
+		"System":     SystemConfig,
+		"DataSource": DataSourceConfig,
 	}
 	for sectionName, sectionStruct := range sections {
 		err = mapSection(sectionName, sectionStruct)
@@ -49,9 +50,9 @@ func Init(path string) {
 	}
 
 	// 重设log等级
-	if !SystemConfig.Debug {
+	if SystemConfig.Debug {
 		log.GlobalLogger = nil
-		log.Log().SetLevel(logrus.InfoLevel)
+		log.Log().SetLevel(logrus.DebugLevel)
 	}
 }
 

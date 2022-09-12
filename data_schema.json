@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/TextDatum"
+  },
+  "definitions": {
+    "TextDatum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ns": {
+          "type": "string"
+        },
+        "speaker": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ns",
+        "speaker",
+        "text"
+      ],
+      "title": "TextDatum"
+    }
+  }
+}
