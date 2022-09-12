@@ -3,10 +3,10 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/lezi-wiki/lezi-api/model"
-	"github.com/lezi-wiki/lezi-api/pkg/response"
+	"github.com/lezi-wiki/lezi-api/pkg/serializer"
 	"github.com/lezi-wiki/lezi-api/pkg/text"
+	"github.com/lezi-wiki/lezi-api/pkg/util"
 	textService "github.com/lezi-wiki/lezi-api/services/text"
-	"math/rand"
 )
 
 func GlobalHandler(c *gin.Context) {
@@ -21,7 +21,7 @@ func GlobalHandler(c *gin.Context) {
 	if ns != "" {
 		arr, err = textService.GetTextByNamespace(ns)
 		if err != nil {
-			response.NotFoundError(c)
+			c.JSON(404, serializer.NotFoundResponse())
 			return
 		}
 	}
@@ -38,13 +38,15 @@ func GlobalHandler(c *gin.Context) {
 		}
 	}
 
-	data := newArr[rand.Intn(len(newArr))]
+	data := util.RandomItemFromSlice(newArr)
 	switch format {
 	case "json":
-		response.JsonData(c, data)
+		c.JSON(200, serializer.NewSuccessResponse(data))
 	case "xml":
-		response.XmlData(c, data)
+		c.XML(200, serializer.NewSuccessResponse(data))
+	case "text":
+		c.String(200, data.Text)
 	default:
-		response.Data(c, data.Text)
+		c.String(200, data.Text)
 	}
 }
