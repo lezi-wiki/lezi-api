@@ -101,8 +101,8 @@ func Init() {
 	sqlDB.SetMaxIdleConns(10)
 	sqlDB.SetMaxOpenConns(100)
 
+	Client = NewDataClient(db)
+
 	// 自动迁移
 	migrate(db)
-
-	Client = NewDataClient(db)
 }

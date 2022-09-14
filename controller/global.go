@@ -11,15 +11,19 @@ import (
 
 func GlobalHandler(c *gin.Context) {
 	var err error
+	var payload model.Text
+
+	speaker := c.Query("speaker")
+	if speaker != "" {
+		payload.Speaker = speaker
+	}
 
 	ns := c.Query("ns")
-	speaker := c.Query("speaker")
-	format := c.Query("format")
+	if ns != "" {
+		payload.Namespace = ns
+	}
 
-	text, err := model.Client.Text.RandomRecord(model.Text{
-		Namespace: ns,
-		Speaker:   speaker,
-	})
+	text, err := model.Client.Text.RandomRecord(payload)
 	if err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			c.JSON(404, serializer.NotFoundResponse())
@@ -30,6 +34,8 @@ func GlobalHandler(c *gin.Context) {
 		c.JSON(500, serializer.NewErrorResponse(500, "database error"))
 		return
 	}
+
+	format := c.Query("format")
 
 	switch format {
 	case "json":

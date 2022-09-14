@@ -30,6 +30,7 @@ type SettingService interface {
 	Delete(name string, settingType SettingType) error
 	List() ([]Setting, error)
 	ListType(settingType SettingType) ([]Setting, error)
+	Exists(name string, settingType *SettingType) bool
 }
 
 type SettingServiceImpl struct {
@@ -92,4 +93,19 @@ func (s *SettingServiceImpl) ListType(settingType SettingType) ([]Setting, error
 	var settings []Setting
 	err := s.db.Model(&Setting{}).Where("type = ?", settingType).Find(&settings).Error
 	return settings, err
+}
+
+func (s *SettingServiceImpl) Exists(name string, settingType *SettingType) bool {
+	t := ""
+	if settingType != nil {
+		t = string(*settingType)
+	}
+
+	var count int64 = 0
+	s.db.Model(&Setting{}).Where(&Setting{
+		Name: name,
+		Type: SettingType(t),
+	}).Count(&count)
+
+	return count > 0
 }

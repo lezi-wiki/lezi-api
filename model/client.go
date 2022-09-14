@@ -9,8 +9,10 @@ var Client *DataClient
 type DataClient struct {
 	db *gorm.DB
 
-	Setting SettingService
-	Text    TextService
+	Setting   SettingService
+	Text      TextService
+	User      UserService
+	Namespace NamespaceService
 }
 
 func NewDataClient(db *gorm.DB) *DataClient {
@@ -20,6 +22,8 @@ func NewDataClient(db *gorm.DB) *DataClient {
 
 	c.Setting = NewSettingService(c.db)
 	c.Text = NewTextService(c.db)
+	c.User = NewUserService(c.db)
+	c.Namespace = NewNamespaceService(c.db)
 
 	return c
 }

@@ -9,10 +9,12 @@ import (
 
 type Text struct {
 	gorm.Model `json:"-" xml:"-" bson:"-"`
-	Namespace  string  `json:"ns" xml:"namespace" bson:"namespace" gorm:"not null;index"`
 	Speaker    string  `json:"speaker" xml:"speaker" bson:"speaker" gorm:"not null;index"`
 	Text       string  `json:"text" xml:"text" bson:"text" gorm:"not null;size:512"`
 	Context    *string `json:"context,omitempty" xml:"context,omitempty" bson:"context,omitempty" gorm:"size:512"`
+
+	UserRefer uint   `json:"-" xml:"-" bson:"-" gorm:"not null;index"`
+	Namespace string `json:"ns" xml:"namespace" bson:"namespace" gorm:"not null;index"`
 }
 
 func init() {
@@ -22,7 +24,6 @@ func init() {
 type TextService interface {
 	Get(text Text) (*Text, error)
 	List(text Text) ([]Text, error)
-	GetTextByNamespace(namespace string) ([]Text, error)
 	GetTextBySpeaker(speaker string) ([]Text, error)
 	ListAll() ([]Text, error)
 	CreateText(text Text) (*Text, error)
@@ -53,16 +54,6 @@ func (t TextServiceImpl) Get(text Text) (*Text, error) {
 func (t TextServiceImpl) List(text Text) ([]Text, error) {
 	var data []Text
 	err := t.db.Model(&Text{}).Where(&text).Find(&data).Error
-	if err != nil {
-		return nil, err
-	}
-
-	return data, nil
-}
-
-func (t TextServiceImpl) GetTextByNamespace(namespace string) ([]Text, error) {
-	var data []Text
-	err := t.db.Model(&Text{}).Where("namespace = ?", namespace).Find(&data).Error
 	if err != nil {
 		return nil, err
 	}

@@ -5,13 +5,14 @@ import (
 	"github.com/lezi-wiki/lezi-api/model"
 	"github.com/lezi-wiki/lezi-api/pkg/log"
 	"github.com/lezi-wiki/lezi-api/pkg/serializer"
+	"github.com/lezi-wiki/lezi-api/pkg/util"
 )
 
 func NamespaceJsonHandler(c *gin.Context) {
 	ns := c.Param("namespace")
 
-	data, err := model.Client.Text.RandomRecord(model.Text{
-		Namespace: ns,
+	namespace, err := model.Client.Namespace.Get(model.Namespace{
+		Name: ns,
 	})
 	if err != nil {
 		log.Log().Errorf("获取数据失败: %s", err)
@@ -19,14 +20,16 @@ func NamespaceJsonHandler(c *gin.Context) {
 		return
 	}
 
-	c.JSON(200, serializer.NewSuccessResponse(data))
+	text := util.RandomItemFromSlice(namespace.Texts)
+
+	c.JSON(200, serializer.NewSuccessResponse(text))
 }
 
 func NamespaceTextHandler(c *gin.Context) {
 	ns := c.Param("namespace")
 
-	data, err := model.Client.Text.RandomRecord(model.Text{
-		Namespace: ns,
+	namespace, err := model.Client.Namespace.Get(model.Namespace{
+		Name: ns,
 	})
 	if err != nil {
 		log.Log().Errorf("获取数据失败: %s", err)
@@ -34,14 +37,16 @@ func NamespaceTextHandler(c *gin.Context) {
 		return
 	}
 
-	c.String(200, data.Text)
+	text := util.RandomItemFromSlice(namespace.Texts)
+
+	c.String(200, text.Text)
 }
 
 func NamespaceXmlHandler(c *gin.Context) {
 	ns := c.Param("namespace")
 
-	data, err := model.Client.Text.RandomRecord(model.Text{
-		Namespace: ns,
+	namespace, err := model.Client.Namespace.Get(model.Namespace{
+		Name: ns,
 	})
 	if err != nil {
 		log.Log().Errorf("获取数据失败: %s", err)
@@ -49,5 +54,7 @@ func NamespaceXmlHandler(c *gin.Context) {
 		return
 	}
 
-	c.XML(200, serializer.NewSuccessResponse(data))
+	text := util.RandomItemFromSlice(namespace.Texts)
+
+	c.XML(200, serializer.NewSuccessResponse(text))
 }
