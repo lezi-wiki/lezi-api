@@ -15,8 +15,7 @@ func UpdateData() {
 	}
 
 	for _, datum := range data {
-		exist := model.Client.Text.Exists(datum)
-		if exist {
+		if model.Client.Text.Exists(datum) {
 			continue
 		}
 
