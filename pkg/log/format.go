@@ -9,7 +9,6 @@ import (
 )
 
 type formatter struct {
-	pid string
 }
 
 // 日志颜色
@@ -40,14 +39,12 @@ func (f *formatter) Format(entry *logrus.Entry) ([]byte, error) {
 	return []byte(fmt.Sprintf(
 		"%s %s | %s | %s\n",
 		level,
-		f.pid,
+		color.New(color.FgHiMagenta).SprintFunc()(os.Getpid()),
 		entry.Time.Format("2006-01-02 15:04:05.000"),
 		entry.Message,
 	)), nil
 }
 
 func NewFormatter() *formatter {
-	return &formatter{
-		pid: color.New(color.FgHiMagenta).Sprint(os.Getpid()),
-	}
+	return &formatter{}
 }
