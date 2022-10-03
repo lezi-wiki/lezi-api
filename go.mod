@@ -11,7 +11,7 @@ require (
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/idoubi/goz v1.2.2
 	github.com/robfig/cron/v3 v3.0.1
-	github.com/samber/lo v1.28.0
+	github.com/samber/lo v1.29.0
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.8.0
 	gorm.io/driver/mysql v1.3.6
