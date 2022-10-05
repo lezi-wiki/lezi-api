@@ -27,6 +27,7 @@ Start command(Linux):
 ```shell
 git clone https://github.com/lezi-wiki/lezi-api
 cd lezi-api
+go run github.com/google/wire/cmd/wire@latest ./...
 go build -o ../lezi-api
 cd ..
 ```
