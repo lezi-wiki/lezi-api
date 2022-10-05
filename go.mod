@@ -35,6 +35,7 @@ require (
 	github.com/goccy/go-json v0.9.10 // indirect
 	github.com/golang-sql/civil v0.0.0-20220223132316-b832511892a9 // indirect
 	github.com/golang-sql/sqlexp v0.1.0 // indirect
+	github.com/google/wire v0.5.0 // indirect
 	github.com/idoubi/goutils v1.0.5 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
 	github.com/jackc/pgconn v1.13.0 // indirect
