@@ -5,7 +5,7 @@ Listen = :8080
 Debug = false
 `
 
-const Version = "1.1.1"
+const Version = "1.1.3"
 
 type system struct {
 	Listen     string `validate:"required"`
