@@ -8,8 +8,9 @@ Debug = false
 const Version = "1.1.0"
 
 type system struct {
-	Listen string `validate:"required"`
-	Debug  bool
+	Listen     string `validate:"required"`
+	Debug      bool
+	HashIDSalt string
 }
 
 type datasource struct {

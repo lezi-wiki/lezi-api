@@ -6,6 +6,7 @@ import (
 	"github.com/lezi-wiki/lezi-api/model"
 	"github.com/lezi-wiki/lezi-api/pkg/log"
 	"github.com/lezi-wiki/lezi-api/pkg/serializer"
+	"github.com/lezi-wiki/lezi-api/pkg/serializer/vo"
 	"gorm.io/gorm"
 )
 
@@ -33,9 +34,9 @@ func GlobalHandler(c *gin.Context) {
 
 	switch format {
 	case "json":
-		c.JSON(200, serializer.NewSuccessResponse(text))
+		c.JSON(200, serializer.NewSuccessResponse(vo.BuildTextVO(text)))
 	case "xml":
-		c.XML(200, serializer.NewSuccessResponse(text))
+		c.XML(200, serializer.NewSuccessResponse(vo.BuildTextVO(text)))
 	case "text":
 		c.String(200, text.Text)
 	default:

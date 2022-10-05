@@ -5,6 +5,7 @@ import (
 	"github.com/lezi-wiki/lezi-api/model"
 	"github.com/lezi-wiki/lezi-api/pkg/log"
 	"github.com/lezi-wiki/lezi-api/pkg/serializer"
+	"github.com/lezi-wiki/lezi-api/pkg/serializer/vo"
 )
 
 func SpeakerJsonHandler(c *gin.Context) {
@@ -19,7 +20,7 @@ func SpeakerJsonHandler(c *gin.Context) {
 		return
 	}
 
-	c.JSON(200, serializer.NewSuccessResponse(data))
+	c.JSON(200, serializer.NewSuccessResponse(vo.BuildTextVO(data)))
 }
 
 func SpeakerXmlHandler(c *gin.Context) {
@@ -34,7 +35,7 @@ func SpeakerXmlHandler(c *gin.Context) {
 		return
 	}
 
-	c.XML(200, serializer.NewSuccessResponse(data))
+	c.XML(200, serializer.NewSuccessResponse(vo.BuildTextVO(data)))
 }
 
 func SpeakerTextHandler(c *gin.Context) {

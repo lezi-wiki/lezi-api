@@ -2,17 +2,17 @@ package model
 
 import (
 	"encoding/gob"
-
 	"github.com/lezi-wiki/lezi-api/pkg/util"
+
 	"gorm.io/gorm"
 )
 
 type Text struct {
-	gorm.Model `json:"-" xml:"-" bson:"-"`
-	Namespace  string  `json:"ns" xml:"namespace" bson:"namespace" gorm:"not null;index"`
-	Speaker    string  `json:"speaker" xml:"speaker" bson:"speaker" gorm:"not null;index"`
-	Text       string  `json:"text" xml:"text" bson:"text" gorm:"not null;size:512"`
-	Context    *string `json:"context,omitempty" xml:"context,omitempty" bson:"context,omitempty" gorm:"size:512"`
+	gorm.Model
+	Namespace string  `gorm:"not null;index"`
+	Speaker   string  `gorm:"not null;index"`
+	Text      string  `gorm:"not null;size:512"`
+	Context   *string `gorm:"size:512"`
 }
 
 func init() {
@@ -123,9 +123,13 @@ func (t TextServiceImpl) Count() int64 {
 }
 
 func (t TextServiceImpl) RandomRecord(rule Text) (*Text, error) {
+	var count int64
+	if err := t.db.Model(&Text{}).Where(&rule).Count(&count).Error; err != nil {
+		return nil, err
+	}
+
 	var text Text
-	err := t.db.Model(&Text{}).Where(&rule).Offset(util.RandomInt(0, int(t.Count()-1))).First(&text).Error
-	if err != nil {
+	if err := t.db.Model(&Text{}).Where(&rule).Offset(util.RandomInt(0, int(count-1))).First(&text).Error; err != nil {
 		return nil, err
 	}
 

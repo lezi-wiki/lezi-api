@@ -13,6 +13,7 @@ require (
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/samber/lo v1.29.0
 	github.com/sirupsen/logrus v1.9.0
+	github.com/speps/go-hashids/v2 v2.0.1
 	github.com/stretchr/testify v1.8.0
 	gorm.io/driver/mysql v1.3.6
 	gorm.io/driver/postgres v1.3.10

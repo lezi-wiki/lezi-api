@@ -5,6 +5,7 @@ import (
 	"github.com/lezi-wiki/lezi-api/model"
 	"github.com/lezi-wiki/lezi-api/pkg/log"
 	"github.com/lezi-wiki/lezi-api/pkg/serializer"
+	"github.com/lezi-wiki/lezi-api/pkg/serializer/vo"
 )
 
 func NamespaceJsonHandler(c *gin.Context) {
@@ -19,7 +20,7 @@ func NamespaceJsonHandler(c *gin.Context) {
 		return
 	}
 
-	c.JSON(200, serializer.NewSuccessResponse(data))
+	c.JSON(200, serializer.NewSuccessResponse(vo.BuildTextVO(data)))
 }
 
 func NamespaceTextHandler(c *gin.Context) {
@@ -49,5 +50,5 @@ func NamespaceXmlHandler(c *gin.Context) {
 		return
 	}
 
-	c.XML(200, serializer.NewSuccessResponse(data))
+	c.XML(200, serializer.NewSuccessResponse(vo.BuildTextVO(data)))
 }
