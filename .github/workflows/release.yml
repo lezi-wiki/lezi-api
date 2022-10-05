@@ -29,6 +29,9 @@ jobs:
           sudo apt-get -y install gcc-arm-linux-gnueabihf libc6-dev-armhf-cross
           sudo apt-get -y install gcc-aarch64-linux-gnu libc6-dev-arm64-cross
 
+      - name: Wire inject
+        run: go run github.com/google/wire/cmd/wire@latest ./...
+
       # Linux Amd64
 
       - name: Build (linux amd64)
