@@ -13,13 +13,13 @@ type DataClient struct {
 	Text    TextService
 }
 
-func NewDataClient(db *gorm.DB) *DataClient {
+func NewDataClient(db *gorm.DB, settingService SettingService, textService TextService) *DataClient {
 	c := &DataClient{
 		db: db,
 	}
 
-	c.Setting = NewSettingService(c.db)
-	c.Text = NewTextService(c.db)
+	c.Setting = settingService
+	c.Text = textService
 
 	return c
 }

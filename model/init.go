@@ -17,7 +17,7 @@ import (
 	"gorm.io/gorm/schema"
 )
 
-func NewDatabase() (*gorm.DB, error) {
+func newDatabase() (*gorm.DB, error) {
 	var dialect gorm.Dialector
 
 	if gin.Mode() == gin.TestMode {
@@ -85,8 +85,8 @@ func NewDatabase() (*gorm.DB, error) {
 	return database, nil
 }
 
-func Init() {
-	db, err := NewDatabase()
+func initDB() *gorm.DB {
+	db, err := newDatabase()
 
 	if err != nil {
 		log.Log().Panicf("数据库连接失败: %s", err)
@@ -104,5 +104,9 @@ func Init() {
 	// 自动迁移
 	migrate(db)
 
-	Client = NewDataClient(db)
+	return db
+}
+
+func Init() {
+	Client = initializeClient()
 }

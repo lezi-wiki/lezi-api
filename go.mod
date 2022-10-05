@@ -9,6 +9,7 @@ require (
 	github.com/go-ini/ini v1.67.0
 	github.com/go-playground/validator/v10 v10.11.1
 	github.com/go-redis/redis/v8 v8.11.5
+	github.com/google/wire v0.5.0
 	github.com/idoubi/goz v1.2.2
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/samber/lo v1.29.0
@@ -35,7 +36,6 @@ require (
 	github.com/goccy/go-json v0.9.10 // indirect
 	github.com/golang-sql/civil v0.0.0-20220223132316-b832511892a9 // indirect
 	github.com/golang-sql/sqlexp v0.1.0 // indirect
-	github.com/google/wire v0.5.0 // indirect
 	github.com/idoubi/goutils v1.0.5 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
 	github.com/jackc/pgconn v1.13.0 // indirect
