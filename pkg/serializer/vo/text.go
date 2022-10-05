@@ -10,7 +10,7 @@ type TextVO struct {
 	ID        string `json:"id" xml:"Id" bson:"id" yaml:"id"`
 	Namespace string `json:"ns" xml:"Namespace" bson:"namespace" yaml:"namespace"`
 	Speaker   string `json:"speaker" xml:"Speaker" bson:"speaker" yaml:"speaker"`
-	Text      string `json:"text" xml:"TextVO" bson:"text" yaml:"text"`
+	Text      string `json:"text" xml:"Text" bson:"text" yaml:"text"`
 }
 
 func (t TextVO) MarshalTextVOJSON() ([]byte, error) {
