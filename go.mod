@@ -17,7 +17,7 @@ require (
 	github.com/speps/go-hashids/v2 v2.0.1
 	github.com/stretchr/testify v1.8.0
 	gorm.io/driver/mysql v1.3.6
-	gorm.io/driver/postgres v1.3.10
+	gorm.io/driver/postgres v1.4.4
 	gorm.io/driver/sqlite v1.3.6
 	gorm.io/driver/sqlserver v1.3.2
 	gorm.io/gorm v1.23.10
