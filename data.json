@@ -651,74 +651,164 @@
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "你们谁能联系到梅尔顿国际学校的客服？"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "我怀疑，有人假借这个学校的名号，来对我们实施诈骗"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "我们无法验证这个组织的真实性"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "这将会关系到工作室的合作项目"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "我根据他们学校的官网，得知他们有一个社团叫：编程社"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "我要LINUX服务器"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "我已经有5TB的云硬盘了"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "啥时结婚了，我当随礼送你了"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "突然暴露了你的无知"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "怕你服务器带不动"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "先把你结婚证拍来"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "兄弟，还是算了吧"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "你这个配置扛不住"
   },
   {
     "ns": "AoligeiHardware",
-    "speaker": "Aoligei",`
+    "speaker": "Aoligei",
     "text": "无知就不要说话了"
-  },  
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "哎！吾掐指一算，这工作室也有一年半的历史了"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "当年那群人，也走的差不多了。"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "当年那群人，都失踪了，还有几个是活着的啊！"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "这个论坛也算是见证了我们的兴起与衰落"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "我今天意欲废了这个论坛"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "想必你也看出来了，我就是不给你"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "我确实不是这样的人"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "赶紧把婚结了"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "你只要能把这个文件配置好，我就给你"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "因为我就是不想让你用"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "哎！我就是玩"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "我看大家一路走来都不容易，想给大家点礼物"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "那算了，我本来还打算发红包的呢"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "打开我心爱的服务器"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "算了，我今天良心发现了"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "那是webssh连接服务器用的"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "配置好了，我就把连接方式给你"
+  },
+  {
+    "ns": "AoligeiHardware",
+    "speaker": "Aoligei",
+    "text": "很简单，已经写好了，一行指令就能启动"
+  },
   {
     "ns": "AoligeiHardware",
     "speaker": "rsodxd",
@@ -1033,5 +1123,105 @@
     "ns": "jiyuyan",
     "speaker": "jiyuyan",
     "text": "什么时候中国也能安装Python再说支持它吧。"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "汇编是不需要优化的"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "正是语言的抽象化开始, 造成太多低效率的代码"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "为什么不用更简单又不需要优化的语法呢"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "沉下去摸鱼, 就是不写代码"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "今天录视频试用了下. 全是毛病,"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "这几天也在考虑用极语言开发IDE"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "EAX,EBX,ECX,EDX,ESP,EBP,EDI,ESI,AX,BX,CX,DX,AH,CH,BH,DH,AL,BL,CL,DL这些英文名词, 你没学过 难道就懂吗"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "纯中文编程真的极简单"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "极语言的语法在所有编程里, 已经是最为简单了"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "语法越复杂, 学起来肯定更难,  极语言是尽可能的使用最简单的语法, 但是也为了能兼容C和VB, 作出太大让步"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "昨天悟到的就是这个意思"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "体积小的程序一定能证明开发者的水平高"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "因为说C#语法简单, 那就不合天理了."
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "中文占用空间大, 运行效率低, 都是因为易语言造成的. 而极语言生成的软件体积小, 直接打破这个谎言了"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "我最不喜欢安装软件到电脑里了"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "这位仁兄也是做中文Python的"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "中文很难达到让别人看不懂这个装逼效果. 除非是文言文"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "学过编程的看极语言几分钟就会得出结论"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "实际上跟其它语言的相同功能一对比, 就发现极语言的代码简单太多了"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",
+    "text": "不是因为习惯了英文编程, 而是大家骨子里都觉得外来的东西一定更好.
   }
 ]
