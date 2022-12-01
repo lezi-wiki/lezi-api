@@ -1223,5 +1223,30 @@
     "ns": "jiyuyan",
     "speaker": "jiyuyan",
     "text": "不是因为习惯了英文编程, 而是大家骨子里都觉得外来的东西一定更好.
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",`
+    "text": "将会尽快规范中文语法标准"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",`
+    "text": "废除缩进, 禁用空格"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",`
+    "text": "自动缩进功能尽快测试一下, 这个功能很快就会被禁用了"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",`
+    "text": "我敢肯定没几个用过自动缩进"
+  },
+  {
+    "ns": "jiyuyan",
+    "speaker": "jiyuyan",`
+    "text": "所以既然大家都不喜欢用, 那就废弃它了
   }
 ]
