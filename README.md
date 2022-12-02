@@ -32,6 +32,6 @@ go build -o ../lezi-api
 cd ..
 ```
 
-## Licenes
+## License
 
 under [GPL-3.0 license](https://github.com/lezi-wiki/lezi-api/blob/master/LICENSE)
