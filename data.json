@@ -1175,6 +1175,21 @@
     "text": "（通过备案需要）半天容易的很"
   },
   {
+    "ns": "GBrother",
+    "speaker": "GBrother",
+    "text": "这b要发卡圈了不少钱"
+  },
+  {
+    "ns": "GBrother",
+    "speaker": "GBrother",
+    "text": "卖g的怎么举报？"
+  },
+  {
+    "ns": "GBrother",
+    "speaker": "GBrother",
+    "text": "枪我不少用户"
+  },
+  {
     "ns": "JigokuZ",
     "speaker": "Xinyue",
     "text": "jdk1.8=jre1.8=java8"
@@ -1323,5 +1338,540 @@
     "ns": "jiyuyan",
     "speaker": "jiyuyan",
     "text": "所以既然大家都不喜欢用, 那就废弃它了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我不要什么技术"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我就是技术"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我的运维能力一点都不低于技术"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "这就是事实"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "实际上真的很可笑"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "继续狗叫"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我用另一台机器连的7700k机器的ipmi"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "只要能塞得进去bios能够识别就能运行"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "ipmi是在主板上的一块单片机和cpu有关系?"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "前面我有提到过我为什么讨厌自动化"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我的7700k终于上架了准备用ipmi装系统"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我就喜欢用原生iso安装"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "听不懂人话?"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "那不是人啊"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "一般那些垃圾服务商自动化安装系统都是pxe网络启动"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我就是嫌他垃圾"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我才需要手懂安装"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "这玩意和通过iso安装程序手动安装的还是有区别的"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "linux快的原因只是没有gui"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "嫌这个垃圾，那个垃圾"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "自己又没什么能力"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "自己又不会开发"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "整天就会狗叫"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "不陪你们玩了，装系统去了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "饭桶分配了一个掩码长度31位的IP不知道能不能配"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "长度31位，明明只有两个可以用IP"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "一个是网络号，一个是广播"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "根本就没有主机地址"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "网络好就是网关"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "网络号可以当网关用"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "不知道他们怎么做到的"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "这协议已经扭曲了吧"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "太牛逼了有实力"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "他们怎么做到分配31位长度掩码的"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "但我怕装完系统绑不上ip"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "31位掩码长度的ip"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "在手机银行转兑一下货币就可以用了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "信用卡才可以直接付"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "借记卡要转"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "借记卡里面是没有钱的"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "所以还得转兑货币冲进去"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "因为是外币，直接也转不进去"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "给我看看你花旗银行"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "给我们欣赏一下没见过"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "信用卡没有什么双不双币的"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "是人民币的额度"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "但是你付款的时候"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "它会自动转货币"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "以相同的汇率进行付款"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "扣减的是人民币的额度"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "visa或者万事达或者美国运通"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "信用卡本身是没有钱的，用的是信用额度但是借记卡不一样"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "就像你银联一样得存进去"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我确实什么都懂了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "真的什么都懂一点"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "无论你说什么我都能答得出来"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我有时候也觉得很牛逼"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我明明没查过资料都懂"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "双和多一样"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "在你的眼里2=100"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "唉哟，逻辑不通"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你就会装逼可是我懂了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "对象是干嘛的？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "满足欲望的吗？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "那你有没有被人操过？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "其实你也看得出来我有水平"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "不要再自欺欺人了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你骗得了我，你骗得了自己吗？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你骗得了所有人啊"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你可以侮辱我，可以说我装"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "但是你内心依然很清楚"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你还是处吗？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "想不想和男人打炮？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "聪明人都是不正常的"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你们觉得我正常才有问题"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "哈哈哈哈开始秀了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我的水平在他们之上"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "大家有目共睹"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你还记得那天怎么被我打脸的吗？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你还要继续装吗？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "一问三不知你还有脸?"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "jre和jdk会用吗？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "来我给你一个程序给我跑起来"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我没让你写"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你这种垃圾我见多了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "想来打我吗？来呀"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我就知道你会这样说"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我装逼有实力"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你有什么实力你懂什么？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "小学生活在自己的世界"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你以为你比我懂"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我的知识储备已经是你的多少倍了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你脑子有毛病?"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我一个月服务器费用顶你一年"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "老子都他妈说了不在家"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我才临时用另一台机器"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "而且我做网站又没收入主要是好玩"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "而你什么都不懂"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "被我打脸之后你气急败坏你非常生气"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你伤害不到我"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你已经破防了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你现在只能靠嘴了"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "说实话，在现实中我直接把你打死"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你以为你是什么东西？"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "你以为自己很有实力，垃圾一个"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "此时此刻我无法用语言来形容我有多么开心"
+  },
+  {
+    "ns": "dongwang",
+    "speaker": "dongwang",
+    "text": "我只需要看着你表演，看着你耍猴就足矣了"
   }
 ]
